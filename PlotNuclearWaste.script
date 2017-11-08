@@ -1,0 +1,10 @@
+#Script for plotting data from NuclearWaste.c#
+set autoscale
+set title "Temperature Surrounding a Rod of Nuclear Waste"
+set xlabel "r(m)"
+set ylabel "T(K)"
+plot "NuclearWaste.txt" using 1:2 with lines title "0 	Years", "NuclearWaste.txt" using 1:3 with lines title "10 	Years", "NuclearWaste.txt" using 1:4 with lines title "20 	Years", "NuclearWaste.txt" using 1:5 with lines title "30 	Years", "NuclearWaste.txt" using 1:6 with lines title "40 	Years", "NuclearWaste.txt" using 1:7 with lines title "50 	Years", "NuclearWaste.txt" using 1:8 with lines title "60 	Years", "NuclearWaste.txt" using 1:9 with lines title "70 	Years", "NuclearWaste.txt" using 1:10 with lines title "80 	Years", "NuclearWaste.txt" using 1:11 with lines title "90 	Years", 
+set term pdf
+set output "NuclearWaste.pdf"
+replot
+exit
